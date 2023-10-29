@@ -1,7 +1,7 @@
-import { FormRowSelect, Formraw, SubmitBtn } from '../components/index';
-import Wrapper from '../assets/wrappers/DashboardFormPage';
+import { FormRowSelect, Formraw, SubmitBtn } from '../components/index.js';
+import Wrapper from '../assets/wrappers/DashboardFormPage.js';
 import {Form, useOutletContext } from "react-router-dom"
-import { JOB_STATUS,JOB_TYPE } from '../../../utils/constants';
+import { JOB_STATUS,JOB_TYPE } from '../../../utils/constants.js';
 
 
 const Addjob = () =>

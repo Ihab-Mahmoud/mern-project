@@ -1,19 +1,19 @@
 import { createBrowserRouter ,RouterProvider } from "react-router-dom";
-import { Login, Register, DashboardLayout, HomeLayout, Error, Landing, AddJob, EditJob, Stats, Profile, AllJobs, Admin } from "./pages/index"
-import { checkTheme, currentUserLoader } from "./pages/dashboard";
+import { Login, Register, DashboardLayout, HomeLayout, Error, Landing, AddJob, EditJob, Stats, Profile, AllJobs, Admin } from "./pages/index.js"
+import { checkTheme, currentUserLoader } from "./pages/dashboard.jsx";
 
 
 // actions and loaders
-import { registerSubmit } from "./utils/register-submit";
-import { loginSubmit } from "./utils/login-submit";
-import { addjobSubmit } from "./utils/addjob-submit";
-import { jobsLoader } from "./pages/alljobs";
-import { editjobSubmit } from "./utils/editjob-submit";
-import { editjobLoader } from "./pages/editjob";
-import deletejobAction from "./pages/DeleteJob";
-import { adminLoader } from "./pages/admin"
-import { profileAction } from "./pages/profile";
-import { StatsLoader } from "./pages/stats";
+import { registerSubmit } from "./utils/register-submit.jsx";
+import { loginSubmit } from "./utils/login-submit.jsx";
+import { addjobSubmit } from "./utils/addjob-submit.jsx";
+import { jobsLoader } from "./pages/alljob.jsx";
+import { editjobSubmit } from "./utils/editjob-submit.jsx";
+import { editjobLoader } from "./pages/editjob.jsx";
+import deletejobAction from "./pages/DeleteJob.jsx";
+import { adminLoader } from "./pages/admin.jsx";
+import { profileAction } from "./pages/profile.jsx";
+import { StatsLoader } from "./pages/stats.jsx";
 // check dark mood theme
 checkTheme()
 
