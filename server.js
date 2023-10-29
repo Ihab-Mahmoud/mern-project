@@ -58,12 +58,13 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./public", "index.html"));
 });
 
-// error handler
+// error handler`
 app.use(NotFoundError);
 app.use(ErrorHandler);
 
 
 const Port = process.env.PORT || 5010;
+
 try {
   await mongoose.connect(process.env.MONGO_URI);
   app.listen(Port, () => {

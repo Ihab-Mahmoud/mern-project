@@ -28,8 +28,8 @@ const Login = () =>
       <Form method="post" className="form ">
         <Logo />
         <h4>Login</h4>
-        <Formraw name="email" type="email" defaultValue="hakemehab@gmail.com" />
-        <Formraw name="password" type="password" defaultValue="******" />
+        <Formraw name="email" type="email" />
+        <Formraw name="password" type="password"  />
         <SubmitBtn formBtn={false} />
         <button type="button" className="btn btn-block" onClick={demoUser}>
           explore the app
