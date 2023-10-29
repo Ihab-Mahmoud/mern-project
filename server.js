@@ -32,7 +32,7 @@ import path from "path";
 const app = express();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-app.use(express.static(path.resolve(__dirname, "./client/dist")));
+app.use(express.static(path.resolve(__dirname, "./public")));
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
