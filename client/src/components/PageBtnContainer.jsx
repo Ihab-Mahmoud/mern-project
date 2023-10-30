@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useLocation, useNavigate } from "react-router-dom";
-import Wrapper from "../assets/wrappers/PageBtnContainer";
+import Wrapper from "../assets/wrappers/PageBtnContainer.js";
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 
 const PageBtnContainer = ({ jobsData }) => {

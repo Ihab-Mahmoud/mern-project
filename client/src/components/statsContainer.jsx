@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { FaBug, FaCalendarCheck, FaSuitcaseRolling } from "react-icons/fa";
-import Wrapper from "../assets/wrappers/StatsContainer";
-import StatItem from "./StatItem";
+import Wrapper from "../assets/wrappers/StatsContainer.js";
+import StatItem from "./StatItem.jsx";
 
 const StatsContainer = ({ data }) => {
   const { defaultStats } = data;

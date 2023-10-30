@@ -1,9 +1,7 @@
-
-
 import { useLoaderData } from "react-router-dom";
-import { ChartsContainer, StatsContainer } from "../components/index"
+import { ChartsContainer, StatsContainer } from "../components/index.js"
 
-import fetch from "../utils/custom-axios"
+import fetch from "../utils/custom-axios.jsx"
 
 export const StatsLoader = async () =>
 {

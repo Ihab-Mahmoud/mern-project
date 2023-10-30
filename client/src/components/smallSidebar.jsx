@@ -1,6 +1,6 @@
-import Wrapper from "../assets/wrappers/SmallSidebar"
+import Wrapper from "../assets/wrappers/SmallSidebar.js"
 import { FaTimes } from "react-icons/fa";
-import {Logo, NavLinks} from "../components/index"
+import {Logo, NavLinks} from "../components/index.js"
 // eslint-disable-next-line react/prop-types
 const SmallSidebar = ({ showSidebar, toggleSidebar,user }) => {
   return (

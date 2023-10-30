@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import links from "../utils/links";
+import links from "../utils/links.jsx";
 import { NavLink } from "react-router-dom";
 
 const NavLinks = ({ toggleSidebar,user }) => {

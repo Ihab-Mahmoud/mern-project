@@ -7,7 +7,7 @@ import { checkTheme, currentUserLoader } from "./pages/dashboard.jsx";
 import { registerSubmit } from "./utils/register-submit.jsx";
 import { loginSubmit } from "./utils/login-submit.jsx";
 import { addjobSubmit } from "./utils/addjob-submit.jsx";
-import { jobsLoader } from "./pages/alljob.jsx";
+import { jobsLoader } from "./pages/alljobs.jsx";
 import { editjobSubmit } from "./utils/editjob-submit.jsx";
 import { editjobLoader } from "./pages/editjob.jsx";
 import deletejobAction from "./pages/DeleteJob.jsx";

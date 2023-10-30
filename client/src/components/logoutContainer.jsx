@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import Wrapper from "../assets/wrappers/LogoutContainer";
+import Wrapper from "../assets/wrappers/LogoutContainer.js";
 import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 
 

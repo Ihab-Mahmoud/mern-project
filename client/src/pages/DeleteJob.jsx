@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import fetch from "../utils/custom-axios";
+import fetch from "../utils/custom-axios.jsx";
 import { redirect } from "react-router-dom";
 
 const deletejobAction = async ({ params }) => {

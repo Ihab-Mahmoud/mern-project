@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Wrapper from "../assets/wrappers/StatItem";
+import Wrapper from "../assets/wrappers/StatItem.js";
 
 const StatItem = ({color,bcg,count,icon,title}) => {
   return (

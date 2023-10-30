@@ -1,8 +1,8 @@
 import { toast } from "react-toastify";
-import fetch from "../utils/custom-axios";
+import fetch from "../utils/custom-axios.jsx";
 import { redirect, useLoaderData } from "react-router-dom";
-import { StatItem } from "../components/index";
-import Wrapper from "../assets/wrappers/StatsContainer";
+import { StatItem } from "../components/index.js";
+import Wrapper from "../assets/wrappers/StatsContainer.js";
 import { FaCalendarCheck, FaSuitcaseRolling } from "react-icons/fa";
 export const adminLoader = async () => {
   try {

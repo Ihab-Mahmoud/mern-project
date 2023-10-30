@@ -1,8 +1,8 @@
-import Logo from "../components/Logo";
-import Formraw from "../components/formraw";
-import Wrapper from "../assets/wrappers/RegisterAndLoginPage";
+import Logo from "../components/Logo.jsx";
+import Formraw from "../components/formraw.jsx";
+import Wrapper from "../assets/wrappers/RegisterAndLoginPage.js";
 import { Link, Form,  } from "react-router-dom";
-import { SubmitBtn } from "../components";
+import { SubmitBtn } from "../components/index.js";
 
 
 const Register = () =>

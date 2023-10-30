@@ -1,10 +1,10 @@
-import Logo from "../components/Logo";
-import Formraw from "../components/formraw";
-import Wrapper from "../assets/wrappers/RegisterAndLoginPage";
+import Logo from "../components/Logo.jsx";
+import Formraw from "../components/formraw.jsx";
+import Wrapper from "../assets/wrappers/RegisterAndLoginPage.js";
 import { Link, Form, useNavigate,  } from "react-router-dom";
-import { SubmitBtn } from "../components/index";
+import { SubmitBtn } from "../components/index.js";
 import { toast } from "react-toastify"
-import fetch from "../utils/custom-axios";
+import fetch from "../utils/custom-axios.jsx";
 const Login = () =>
 {
   const navigation = useNavigate()

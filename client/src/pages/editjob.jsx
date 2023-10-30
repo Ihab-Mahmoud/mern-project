@@ -1,8 +1,8 @@
-import { FormRowSelect, Formraw, SubmitBtn } from "../components/index";
-import Wrapper from "../assets/wrappers/DashboardFormPage";
+import { FormRowSelect, Formraw, SubmitBtn } from "../components/index.js";
+import Wrapper from "../assets/wrappers/DashboardFormPage.js";
 import { Form, redirect, useLoaderData } from "react-router-dom";
-import { JOB_STATUS, JOB_TYPE } from "../../../utils/constants";
-import fetch from "../utils/custom-axios";
+import { JOB_STATUS, JOB_TYPE } from "../../../utils/constants.js";
+import fetch from "../utils/custom-axios.jsx";
 
 export const editjobLoader = async ({ params }) => {
   try {

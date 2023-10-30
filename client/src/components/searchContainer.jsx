@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Link, useSubmit } from "react-router-dom";
-import { JOB_STATUS, JOB_SORT_BY, JOB_TYPE } from "../../../utils/constants";
-import Wrapper from "../assets/wrappers/DashboardFormPage";
-import { Formraw, FormRowSelect } from "./index";
+import { JOB_STATUS, JOB_SORT_BY, JOB_TYPE } from "../../../utils/constants.js";
+import Wrapper from "../assets/wrappers/DashboardFormPage.js";
+import { Formraw, FormRowSelect } from "./index.js";
 
 const SearchContainer = ({ params }) => {
   const debounce = (onChange) => {

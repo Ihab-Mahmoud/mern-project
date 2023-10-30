@@ -1,7 +1,8 @@
-import { JobContainer, SearchContainer } from "../components/index";
+/* eslint-disable react-refresh/only-export-components */
+import { JobContainer, SearchContainer } from "../components/index.js";
 import { toast } from "react-toastify";
 import { useLoaderData } from "react-router-dom";
-import { customFetch } from "../utils/custom-axios";
+import { customFetch } from "../utils/custom-axios.jsx";
 
 export const jobsLoader = async ({ request }) => {
   const params = Object.fromEntries([

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import Wrapper from "../assets/wrappers/JobsContainer";
-import { Job } from "../components/index";
-import PageBtnContainer from "./PageBtnContainer";
+import Wrapper from "../assets/wrappers/JobsContainer.js";
+import { Job } from "../components/index.js";
+import PageBtnContainer from "./PageBtnContainer.jsx";
 
 const JobContainer = ({ jobsData }) =>
 {

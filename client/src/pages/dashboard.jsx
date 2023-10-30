@@ -1,8 +1,9 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useState } from "react";
 import { Outlet, redirect, useLoaderData, useNavigate } from "react-router-dom";
-import Wrapper from "../assets/wrappers/Dashboard";
-import { Navbar, SmallSidebar, BigSidebar } from "../components/index";
-import fetch from "../utils/custom-axios";
+import Wrapper from "../assets/wrappers/Dashboard.js";
+import { Navbar, SmallSidebar, BigSidebar } from "../components/index.js";
+import fetch from "../utils/custom-axios.jsx";
 import { toast } from "react-toastify";
 
 export const currentUserLoader = async () => {

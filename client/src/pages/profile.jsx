@@ -1,9 +1,9 @@
-import { Formraw } from "../components";
-import Wrapper from "../assets/wrappers/DashboardFormPage";
+import { Formraw } from "../components/index.js";
+import Wrapper from "../assets/wrappers/DashboardFormPage.js";
 import { useOutletContext } from "react-router-dom";
 import { useNavigation, Form } from "react-router-dom";
 import { toast } from "react-toastify";
-import fetch from "../utils/custom-axios";
+import fetch from "../utils/custom-axios.jsx";
 
 
 export const profileAction = async ({ request }) => {

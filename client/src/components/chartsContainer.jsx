@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import Wrapper from "../assets/wrappers/ChartsContainer";
+import Wrapper from "../assets/wrappers/ChartsContainer.js";
 
-import AreaChart from "./areaChart";
-import BarChart from "./barChart";
+import AreaChart from "./areaChart.jsx";
+import BarChart from "./barChart.jsx";
 
 const ChartsContainer = ({data}) => {
     const [barChart, setBarChart] = useState(true);

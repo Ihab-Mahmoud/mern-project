@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Wrapper from '../assets/wrappers/JobInfo'
+import Wrapper from '../assets/wrappers/JobInfo.js'
 
 const JobInfo = ({ icon, text }) =>
 {

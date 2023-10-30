@@ -2,8 +2,8 @@
 import { FaAlignLeft } from "react-icons/fa";
 // import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 
-import Wrapper from "../assets/wrappers/Navbar";
-import {Logo,LogoutContainer,Themetoggle} from "../components/index";
+import Wrapper from "../assets/wrappers/Navbar.js";
+import {Logo,LogoutContainer,Themetoggle} from "../components/index.js";
 // eslint-disable-next-line react/prop-types
 const Navbar = ({
   toggleSidebar,

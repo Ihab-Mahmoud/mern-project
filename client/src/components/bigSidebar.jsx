@@ -1,5 +1,5 @@
-import Wrapper from "../assets/wrappers/BigSidebar";
-import { Logo, NavLinks } from "../components/index";
+import Wrapper from "../assets/wrappers/BigSidebar.js";
+import { Logo, NavLinks } from "../components/index.js";
 
 // eslint-disable-next-line react/prop-types
 const BigSidebar = ({ toggleSidebar, showSidebar, user }) => {
