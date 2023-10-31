@@ -6,6 +6,7 @@ import {
 
 import { checkForTestUser } from '../middlewares/auth.js';
 import upload from "../middlewares/multer.js";
+import { authorizePermissions } from "../middlewares/auth.js";
 
 
 const router = express()

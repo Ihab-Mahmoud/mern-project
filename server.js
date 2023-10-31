@@ -18,6 +18,10 @@ import NotFoundError from "./middlewares/notFound.js";
 
 import { authenticateUser } from "./middlewares/auth.js";
 
+import helmet from"helmet"
+import mongoSanitize from "express-mongo-sanitize";
+
+
 import cookieParser from "cookie-parser";
 
 
@@ -48,6 +52,10 @@ cloudinary.config({
 
 app.use(express.json());
 app.use(cookieParser());
+
+// security packages
+app.use(helmet());
+app.use(mongoSanitize()); 
 
 // routes
 app.use("/api/v1/jobs",authenticateUser, jobRouter);

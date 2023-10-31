@@ -7,7 +7,6 @@ import BarChart from "./barChart.jsx";
 
 const ChartsContainer = ({data}) => {
     const [barChart, setBarChart] = useState(true);
-    console.log(data);
   return (
     <Wrapper>
       <h4>Monthly Applications</h4>

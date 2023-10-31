@@ -4,7 +4,7 @@ import { redirect, useLoaderData } from "react-router-dom";
 import { StatItem } from "../components/index.js";
 import Wrapper from "../assets/wrappers/StatsContainer.js";
 import { FaCalendarCheck, FaSuitcaseRolling } from "react-icons/fa";
-export const adminLoader = async () => {
+export const AdminLoader = async () => {
   try {
     const { data } = await fetch("/user/admin/app-stats", "get");
     return data;

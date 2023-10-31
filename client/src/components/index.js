@@ -15,3 +15,5 @@ export { default as SubmitBtn } from "./SubmitBtn.jsx";
 export { default as ChartsContainer } from "./chartsContainer.jsx";
 export { default as StatsContainer } from "./statsContainer.jsx";
 export { default as SearchContainer } from "./searchContainer.jsx";
+export { default as Loading } from "./Lodaing.jsx";
+export { default as ErrorElement } from "./ErrorElement.jsx";

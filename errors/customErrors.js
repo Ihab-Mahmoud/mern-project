@@ -21,7 +21,7 @@ export class UnauthorizedError extends Error {
     {
         super(message);
         this.name = "UnauthorizedError";
-        this.status = StatusCodes.FORBIDDEN;
+        this.status = StatusCodes.UNAUTHORIZED;
   };
 }
 export class UnauthenticatedError extends Error {

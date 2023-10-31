@@ -1,29 +1,33 @@
-import { useLoaderData } from "react-router-dom";
-import { ChartsContainer, StatsContainer } from "../components/index.js"
+import { ChartsContainer, StatsContainer } from "../components/index.js";
 
-import fetch from "../utils/custom-axios.jsx"
+import fetch from "../utils/custom-axios.jsx";
+import { useQuery } from "@tanstack/react-query";
 
-export const StatsLoader = async () =>
-{
-  try {
-    const { data } = await fetch("/jobs/stats", "get")
+
+const statsQuery = {
+  queryKey: ['stats'],
+  queryFn: async () => {
+    const { data } = await fetch("/jobs/stats", "get");
     return data;
-  } catch (error) {
-    console.log(error);
-    return null;
-  }
-}
+  },
+};
 
+export const StatsLoader = (queryClient) => async () => {
+  const data = await queryClient.ensureQueryData(statsQuery);
+  return data;
+};
 
 const Stats = () =>
 {
-  const data = useLoaderData()
+  const data = useQuery(statsQuery);
   return (
     <>
-      <StatsContainer data={data} />
-      {data.appGroupStats.length !== 0 && <ChartsContainer data={data.appGroupStats} />}
+      <StatsContainer data={data?.data} />
+      {data?.data?.appGroupStats?.length !== 0 && (
+        <ChartsContainer data={data.appGroupStats} />
+      )}
     </>
   );
-}
+};
 
 export default Stats;

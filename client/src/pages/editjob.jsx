@@ -3,20 +3,39 @@ import Wrapper from "../assets/wrappers/DashboardFormPage.js";
 import { Form, redirect, useLoaderData } from "react-router-dom";
 import { JOB_STATUS, JOB_TYPE } from "../../../utils/constants.js";
 import fetch from "../utils/custom-axios.jsx";
+import { useQuery } from "@tanstack/react-query";
 
-export const editjobLoader = async ({ params }) => {
-  try {
-    const { data } = await fetch(`/jobs/${ params.id }`, "get");
-    return data;
-  } catch (error) {
-    console.log(error);
-    return redirect("/dashboard/all-jobs");
-  }
+const singleJobQuery = (params) => {
+  const { id } = params;
+  return {
+    queryKey: [
+      "single",
+      id
+    ],
+    queryFn: async () => {
+       const { data } = await fetch(`/jobs/${id}`, "get");
+       return data;
+    },
+  };
 };
 
-const Editjob = () => {
-  const { job } = useLoaderData();
-  const user = job[0];
+export const EditjobLoader =
+  (queryClient) =>
+  async ({ params }) => {
+    try {
+      await queryClient.ensureQueryData(singleJobQuery(params));
+      return params;
+    } catch (error) {
+      console.log(error);
+      return redirect("/dashboard/all-jobs");
+    }
+  };
+
+const Editjob = () =>
+{
+  const params = useLoaderData()
+  const {data} = useQuery(singleJobQuery(params));
+  const user = data?.job[0];
   
   return (
     <Wrapper>

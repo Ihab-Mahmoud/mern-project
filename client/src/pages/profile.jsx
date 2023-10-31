@@ -5,29 +5,27 @@ import { useNavigation, Form } from "react-router-dom";
 import { toast } from "react-toastify";
 import fetch from "../utils/custom-axios.jsx";
 
-
-export const profileAction = async ({ request }) => {
-  const formData = await request.formData();
-  const file = formData.get('avatar');
-  if (file && file.size > 500000) {
-    toast.error('Image size too large');
+export const ProfileAction =
+  (queryClient) =>
+  async ({ request }) => {
+    const formData = await request.formData();
+    const file = formData.get("avatar");
+    if (file && file.size > 500000) {
+      toast.error("Image size too large");
+      return null;
+    }
+    try {
+      await fetch("/user/update-user", "patch", formData);
+      queryClient.invalidateQueries(["currentUser"]);
+      toast.success("Profile updated successfully");
+    } catch (error) {
+      toast.error(error?.response?.data?.msg);
+    }
     return null;
-  }
-  try {
-    await fetch('/user/update-user',"patch",formData);
-    toast.success('Profile updated successfully');
-  } catch (error) {
-    toast.error(error?.response?.data?.msg);
-  }
-  return null;
-};
+  };
 
-
-
-const Profile = () =>
-{
+const Profile = () => {
   const { user } = useOutletContext();
-  const { name, lastName, email, location } = user;
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   return (
@@ -47,10 +45,18 @@ const Profile = () =>
               accept="image/*"
             ></input>
           </div>
-          <Formraw type="string" name="name" defaultValue={name} />
-          <Formraw type="string" name="lastName" defaultValue={lastName} />
-          <Formraw type="email" name="email" defaultValue={email} />
-          <Formraw type="string" name="location" defaultValue={location} />
+          <Formraw type="string" name="name" defaultValue={user?.name} />
+          <Formraw
+            type="string"
+            name="lastName"
+            defaultValue={user?.lastName}
+          />
+          <Formraw type="email" name="email" defaultValue={user?.email} />
+          <Formraw
+            type="string"
+            name="location"
+            defaultValue={user?.location}
+          />
           <button
             type="submit"
             className="btn btn-block form-btn"

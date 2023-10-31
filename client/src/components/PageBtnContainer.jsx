@@ -5,8 +5,6 @@ import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 
 const PageBtnContainer = ({ jobsData }) => {
   const { numOfPages, currentPage } = jobsData;
-  console.log(currentPage);
-
   const location = useLocation();
   const navigate = useNavigate();
 

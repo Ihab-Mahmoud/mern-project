@@ -8,7 +8,7 @@ const NavLinks = ({ toggleSidebar,user }) => {
       {links.map((link) => {
         const { text, path, icon } = link;
         // admin user
-        if (text === "admin" && user.role !== "admin") {
+        if (text === "admin" && user?.role !== "admin") {
           return null;
         } 
         return (
