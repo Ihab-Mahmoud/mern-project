@@ -7,7 +7,7 @@ const Landing = () => {
   return (
     <Wrapper>
       <nav>
-        <Logo/>
+        <Logo />
       </nav>
       <div className="container page">
         <div className="info">
@@ -15,10 +15,9 @@ const Landing = () => {
             Job <span>Tracking</span> App
           </h1>
           <p>
-            I m baby wayfarers hoodie next level taiyaki brooklyn cliche blue
-            bottle single-origin coffee chia. Aesthetic post-ironic venmo,
-            quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
-            narwhal.
+            job tracking app is a comprehensive tool designed to streamline job
+            offers that the user have, allowing for efficient choosing and
+            monitoring. With its user-friendly interface and real-time updates,
           </p>
           <Link to="/register" className="btn register-link">
             Register
